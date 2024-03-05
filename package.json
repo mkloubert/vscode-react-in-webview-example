@@ -1,0 +1,46 @@
+{
+    "name": "vscode-react-in-webview-example",
+    "displayName": "vscode-react-in-webview-example",
+    "description": "Shows how to use JSX with WebViews of VSCode",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.87.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "vscode-react-in-webview-example.helloWorld",
+                "title": "Hello World"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "vscode-test"
+    },
+    "devDependencies": {
+        "@types/ejs": "3.1.5",
+        "@types/lodash": "4.14.202",
+        "@types/node": "18.19.21",
+        "@types/vscode": "1.87.0",
+        "@typescript-eslint/eslint-plugin": "7.1.0",
+        "@typescript-eslint/parser": "7.1.0",
+        "eslint": "8.57.0",
+        "typescript": "5.3.3"
+    },
+    "dependencies": {
+        "ejs": "3.1.9",
+        "lodash": "4.17.21"
+    }
+}
